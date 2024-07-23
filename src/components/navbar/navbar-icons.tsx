@@ -37,13 +37,22 @@ export const NavbarIcons = () => {
         </Modal>
       )}
       <IoMdNotificationsOutline className="w-6 h-6" />
-      <IoCartOutline
-        className="w-6 h-6"
-        onClick={() => {
-          dispatch(toggleModal("open_navbar_cart"));
-        }}
-      />
-      {modalId == "open_navbar_cart" && <Modal><CartModal /></Modal>}
+      <div className="relative cursor-pointer">
+        <IoCartOutline
+          className="w-6 h-6"
+          onClick={() => {
+            dispatch(toggleModal("open_navbar_cart"));
+          }}
+        />
+        <div className="absolute -top-4 -right-4 w-6 h-6 bg-lama rounded-full text-white text-sm flex items-center justify-center">
+          2
+        </div>
+      </div>
+      {modalId == "open_navbar_cart" && (
+        <Modal className="absolute flex flex-col gap-6 w-max p-4 bg-white rounded-md top-12 right-0 text-sm shadow-[0_3px_10px_rgb(0,0,0,0.2)] z-20">
+          <CartModal />
+        </Modal>
+      )}
     </div>
   );
 };
