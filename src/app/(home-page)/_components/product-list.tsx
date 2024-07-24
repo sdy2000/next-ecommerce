@@ -7,8 +7,6 @@ export const ProductList = () => {
       <CardSimple />
       <CardSimple />
       <CardSimple />
-      <CardSimple />
-      <CardSimple />
     </div>
   );
 };
