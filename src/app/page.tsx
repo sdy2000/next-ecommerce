@@ -1,6 +1,8 @@
+import { Slider } from "@/components"
+
 const HomePage = () => {
   return (
-    <div className=''>HomePage</div>
+    <div className=''><Slider /></div>
   )
 }
 

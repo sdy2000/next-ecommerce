@@ -27,7 +27,7 @@ export const NavbarIcons = () => {
 
   return (
     <div className="relative flex items-center gap-4 xl:gap-6">
-      <IoPersonCircleOutline className="w-6 h-6" onClick={handleProfile} />
+      <IoPersonCircleOutline className="w-6 h-6 hover:text-blue-800 duration-200 cursor-pointer" onClick={handleProfile} />
       {modalId == "open_navbar_profile" && (
         <Modal className="absolute p-4 rounded-md top-12 left-0 text-sm shadow-[0_3px_10px_rgb(0,0,0,0.2)] z-20">
           <div>
@@ -36,10 +36,10 @@ export const NavbarIcons = () => {
           </div>
         </Modal>
       )}
-      <IoMdNotificationsOutline className="w-6 h-6" />
+      <IoMdNotificationsOutline className="w-6 h-6 hover:text-blue-800 duration-200 cursor-pointer" />
       <div className="relative cursor-pointer">
         <IoCartOutline
-          className="w-6 h-6"
+          className="w-6 h-6 hover:text-blue-800 duration-200 cursor-pointer"
           onClick={() => {
             dispatch(toggleModal("open_navbar_cart"));
           }}
