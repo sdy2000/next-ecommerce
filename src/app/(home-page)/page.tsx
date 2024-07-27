@@ -1,4 +1,5 @@
-import { CategoriesList, ProductList, Slider } from "./_components";
+import { ProductList } from "@/components";
+import { CategoriesList, Slider } from "./_components";
 
 const HomePage = () => {
   return (
