@@ -13,6 +13,7 @@ const modalSlice = createSlice({
   initialState,
   reducers: {
     toggleModal: (state, { payload }) => {
+      console.log(payload)
       state.modalId = payload === state.modalId ? "" : payload;
     },
   },
