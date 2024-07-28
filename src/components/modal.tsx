@@ -22,6 +22,7 @@ export const Modal = ({ children,className }: ClickOutsideHandlerProps) => {
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
+    
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
